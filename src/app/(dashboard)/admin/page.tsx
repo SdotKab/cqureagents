@@ -1,4 +1,4 @@
-import AdminTopCard from "@/components/cards/adminTopCard";
+import AdminTopCard from "@/components/cards/AdminTopCard";
 import Announcements from "@/components/charts/admin/Announcement";
 import EventCalendar from "@/components/charts/admin/EventCalendar";
 import TaskBugBar from "@/components/charts/admin/TaskBugBar";

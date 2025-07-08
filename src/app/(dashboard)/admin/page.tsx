@@ -1,5 +1,5 @@
 import AdminTopCard from "@/components/cards/AdminTopCard";
-import Announcements from "@/components/charts/admin/Announcement";
+import Announcements from "@/components/tables/Announcements";
 import EventCalendar from "@/components/charts/admin/EventCalendar";
 import TaskBugBar from "@/components/charts/admin/TaskBugBar";
 import TaskScoreBar from "@/components/charts/admin/TaskScoreBar";

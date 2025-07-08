@@ -3,7 +3,7 @@ import ClientTopCard from '../cards/ClientTopCard'
 import TaskScoreBar from '../charts/admin/TaskScoreBar'
 import TaskBugBar from '../charts/admin/TaskBugBar'
 import EventCalendar from '../charts/admin/EventCalendar'
-import Announcements from '../charts/admin/Announcement'
+import Announcements from '../tables/Announcements'
 
 
 const ClientSecurity = () => {

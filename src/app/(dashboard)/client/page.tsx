@@ -1,5 +1,11 @@
+import ClientAssetsCard from "@/components/cards/ClientAssetsCard";
+import ClientComplianceCard from "@/components/cards/ClientComplianceCard";
+import ClientDashScoreCard from "@/components/cards/ClientDashScoreCard";
+import ClientPersonnelCard from "@/components/cards/ClientPersonnelCard";
 import ClientTopCard from "@/components/cards/ClientTopCard";
 import LongClientCard from "@/components/cards/LongClientCard";
+import SampleCard from "@/components/cards/SampleCard";
+import RiskHeatMatrix from "@/components/charts/RiskHeatMatrix";
 import ThreatFeeds from "@/components/tables/ThreatFeeds";
 
 
@@ -8,16 +14,21 @@ const ClientPage = () => {
     <div className="flex-1 p-4 flex gap-4 flex-col xl:flex-row">
       {/* LEFT */}
       <div className="w-full xl:w-2/3">
-        <div className="h-full bg-white p-4 rounded-md">
-          <h1 className="text-xl font-semibold">Score and Charts</h1>
-          <div className="flex gap-4 justify-between flex-wrap">
-            <ClientTopCard type="score" />
-            <ClientTopCard type="assets" />
-            <ClientTopCard type="personnel" />
+        <div className="h-full bg-white p-2 rounded-md">
+          <h1 className="text-xl font-semibold p-4">Score and Charts</h1>
+          <div className="h-full w-full bg-white p-2 rounded-md md:flex md:flex-row">
+            <div className="md:w-1/2">
+              <ClientDashScoreCard />
+              <ClientPersonnelCard />
+              <ClientAssetsCard />
+            </div>
+            <div className="md:w-1/2">
+              <ClientComplianceCard />
+              <ClientComplianceCard />
+            </div>
           </div>
-          <div className="flex gap-4 justify-between flex-wrap mt-4">
-            <LongClientCard type="risk" type2="vulernabilties" />
-          </div>
+              <RiskHeatMatrix />
+              <SampleCard />
         </div>
       </div>
       {/* RIGHT */}

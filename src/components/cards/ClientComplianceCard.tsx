@@ -19,7 +19,12 @@ const COLORS = ['#22c55e', '#facc15', '#ef4444']; // green, yellow, red
 const ClientComplianceCard: React.FC = () => {
   return (
     <div className="mb-3 max-w-md mx-auto p-2 bg-white border-2 border-slate-500 rounded-lg md:w-4/5">
-      <h2 className="text-center text-sm font-semibold text-gray-600">Compliance Overview</h2>
+      <div className="flex justify-between items-center p-2">
+        <h2 className="capitalize text-xs md:text-sm font-medium text-gray-500">Compliance</h2>
+        <span className="text-[9px] md:text-[10px] px-2 py-1 rounded-full border-2 border-slate-300">
+          05/25
+        </span>
+      </div>
 
       <div className="w-full aspect-square">
         <ResponsiveContainer width="100%" height="100%">

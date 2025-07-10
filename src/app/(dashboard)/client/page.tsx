@@ -2,9 +2,12 @@ import ClientAssetsCard from "@/components/cards/ClientAssetsCard";
 import ClientComplianceCard from "@/components/cards/ClientComplianceCard";
 import ClientDashScoreCard from "@/components/cards/ClientDashScoreCard";
 import ClientPersonnelCard from "@/components/cards/ClientPersonnelCard";
+import ClientRisksCard from "@/components/cards/ClientRisksCard";
 import ClientTopCard from "@/components/cards/ClientTopCard";
+import ClientVulCard from "@/components/cards/ClientVulCard";
 import LongClientCard from "@/components/cards/LongClientCard";
 import SampleCard from "@/components/cards/SampleCard";
+import RadarsChart from "@/components/charts/RadarsChart";
 import RiskHeatMatrix from "@/components/charts/RiskHeatMatrix";
 import ThreatFeeds from "@/components/tables/ThreatFeeds";
 
@@ -19,11 +22,13 @@ const ClientPage = () => {
           <div className="h-full w-full bg-white p-2 rounded-md md:flex md:flex-row">
             <div className="md:w-1/2">
               <ClientDashScoreCard />
+              <ClientRisksCard />
+              <ClientVulCard />
               <ClientPersonnelCard />
               <ClientAssetsCard />
             </div>
             <div className="md:w-1/2">
-              <ClientComplianceCard />
+              <RadarsChart />
               <ClientComplianceCard />
             </div>
           </div>

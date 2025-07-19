@@ -1,6 +1,38 @@
 // TEMPORARY DATA
 
 export let role = "admin";
+export const assetsData = [
+  {
+    id: 1,
+    assetId: "1234567890",
+    name: "Workstation 1",
+    owner: "John Doe",
+    source: "Vendor 1",
+    os_version: "Windows 10.2",
+    last_patch: "Windows Service Pack 2",
+    check_in: "12/31/24 11:57 PM",
+  },
+  {
+    id: 2,
+    assetId: "1234567891",
+    name: "Workstation 2",
+    owner: "John Doe",
+    source: "Vendor 2",
+    os_version: "Mac OS X",
+    last_patch: "Mac OS X Service Pack 2",
+    check_in: "03/03/25 11:57 PM",
+  },
+  {
+    id: 3,
+    assetId: "1234567892",
+    name: "Workstation 3",
+    owner: "John Doe",
+    source: "Vendor 3",
+    os_version: "Windows 10.2",
+    last_patch: "Windows Service Pack 2",
+    check_in: "05/21/25 11:57 PM",
+  },
+];
 
 export const teamsData = [
   {

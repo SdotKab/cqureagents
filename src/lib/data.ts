@@ -1,6 +1,66 @@
 // TEMPORARY DATA
 
 export let role = "admin";
+export const personnelData = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "johndoe@johndoe.com",
+    bgcheck: "Complete",
+    security_training: "Completed",
+    devices: "4",
+  },
+    {
+    id: 2,
+    name: "James Doe",
+    email: "jamesdoe@johndoe.com",
+    bgcheck: "Complete",
+    security_training: "Completed",
+    devices: "3",
+  },
+    {
+    id: 3,
+    name: "Jane Doe",
+    email: "janedoe@johndoe.com",
+    bgcheck: "Incomplete",
+    security_training: "Incompleted",
+    devices: "2",
+  },
+]
+
+export const riskmgtData = [
+  {
+    id: 1,
+    desc: "Failure to retain relevant compliance",
+    categories: "compliance",
+    owner: "John Doe",
+    inherent: "5",
+    treatment: "Mitigate",
+    residual: "9",
+    status: "Assessment - Complete",
+  },
+  {
+    id: 2,
+    desc: "Failure to retain relevant compliance",
+    categories: "environmental",
+    owner: "John Doe",
+    inherent: "2",
+    treatment: "Accept",
+    residual: "7",
+    status: "Draft",
+  },
+  {
+    id: 3,
+    desc: "Failure to retain relevant compliance",
+    categories: "other",
+    owner: "John Doe",
+    inherent: "6",
+    treatment: "Mitigate",
+    residual: "3",
+    status: "Assessment - Complete",
+  },
+]
+
 export const assetsData = [
   {
     id: 1,

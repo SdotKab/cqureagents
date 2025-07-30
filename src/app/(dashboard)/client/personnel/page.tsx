@@ -1,66 +1,45 @@
 import Pagination from '@/components/tables/Pagination'
 import Table from '@/components/tables/Tables'
 import TableSearch from '@/components/tables/TableSearch'
-import { assetsData } from '@/lib/data';
+import { personnelData } from '@/lib/data';
 import Image from 'next/image'
 import Link from 'next/link';
+import photo from "./profile.png"
 
-type Asset = {
+type Personnel = {
   id: number;
-  assetId: string;
   name: string;
-  os_version: string;
-  last_patch: string;
-  check_in: string;
-  source: string,
-  owner: string;
-  vendor?: string;
+  email: string;
+  bgcheck: string;
+  security_training: string;
+  devices: string;
 };
 
 const columns = [
   {
-    header: "Info",
-    accessor: "info",
-  },
-  {
-    header: "Asset Id",
-    accessor: "assetId",
-    className: "hidden md:table-cell",
-  },
-  {
     header: "Name",
     accessor: "name",
+  },
+  {
+    header: "Background Check",
+    accessor: "bgcheck",
     className: "hidden md:table-cell",
   },
   {
-    header: "Last CheckIn",
-    accessor: "check_in",
+    header: "Security Training",
+    accessor: "security_training",
     className: "hidden md:table-cell",
   },
   {
-    header: "OS Version",
-    accessor: "os_version",
-    className: "hidden md:table-cell",
-  },
-  {
-    header: "Source",
-    accessor: "source",
+    header: "Connected Devices",
+    accessor: "devices",
     className: "hidden lg:table-cell",
-  },
-  {
-    header: "Owner",
-    accessor: "owner",
-    className: "hidden lg:table-cell",
-  },
-  {
-    header: "Actions",
-    accessor: "action",
   },
 ];
 
 
-const AssetsListPage = () => {
-      const renderRow = (item: Asset) => (
+const PersonnelListPage = () => {
+      const renderRow = (item: Personnel) => (
     <tr
       key={item.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
@@ -74,31 +53,29 @@ const AssetsListPage = () => {
           className="md:hidden xl:block w-10 h-10 rounded-full object-cover"
         /> */}
         <div className="flex flex-col">
-          <h3 className="font-semibold">{item.name}</h3>
-          <p className="text-xs text-gray-500">{item.owner}</p>
+          <h2 className="font-semibold">{item.name}</h2>
+          <p className="text-xs text-gray-500">{item.email}</p>
         </div>
       </td>
-      <td className="hidden md:table-cell">{item.assetId}</td>
-      <td className="hidden md:table-cell">{item.os_version}</td>
-      <td className="hidden md:table-cell">{item.last_patch}</td>
-      <td className="hidden md:table-cell">{item.source}</td>
-      <td className="hidden md:table-cell">{item.check_in}</td>
+      <td className="hidden md:table-cell">{item.bgcheck}</td>
+      <td className="hidden md:table-cell">{item.security_training}</td>
+      <td className="hidden md:table-cell">{item.devices}</td>
 
-      <td>
-        <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
+      {/* <td> */}
+        {/* <div className="flex items-center gap-2">
+          <Link href={`/list/personnel/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaSky">
               <Image src="/view.png" alt="" width={16} height={16} />
             </button>
-          </Link>
+          </Link> */}
           {/* {role === "admin" && (
             // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
             //   <Image src="/delete.png" alt="" width={16} height={16} />
             // </button>
             <FormModal table="teacher" type="delete" id={item.id}/>
           )} */}
-        </div>
-      </td>
+        {/* </div>
+      </td> */}
     </tr>
   );
 
@@ -106,7 +83,7 @@ const AssetsListPage = () => {
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* TOP */}
       <div className="flex items-center justify-between">
-        <h1 className="hidden md:block text-lg font-semibold">Assets</h1>
+        <h1 className="hidden md:block text-lg font-semibold">Personnel</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-4 self-end">
@@ -126,11 +103,11 @@ const AssetsListPage = () => {
         </div>
       </div>
       {/* LIST */}
-      <Table columns={columns} renderRow={renderRow} data={assetsData} />
+      <Table columns={columns} renderRow={renderRow} data={personnelData} />
       {/* PAGINATION */}
       <Pagination />
     </div>
   )
 }
 
-export default AssetsListPage
+export default PersonnelListPage
